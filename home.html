@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E-Learning</title>
+<link rel="stylesheet" href="style.css" />
+<script src="../custom-scripts.js" defer></script>
+</head>
+<body>
+  <main>
+    <!-- Header Start -->
+    <header>
+      <nav class="nav container">
+        <h2 class="nav_logo"><a href="#">Let's Learn</a></h2>
+
+        <ul class="menu_items">
+          <li class="active"><a href="home.html" class="nav_link">Home</a></li>
+          <li class="dropdown">
+            <a href="login.html" class="nav_link">Courses</a>
+            <!--<ul class="submenu">
+              <li><a href="#" class="nav_link">Course1</a></li>
+              <li><a href="#" class="nav_link">Course2</a></li>
+              <li><a href="#" class="nav_link">Course3</a></li>
+              <li><a href="#" class="nav_link">view all Courses</a></li>
+            </ul>-->
+          </li>
+          <li><a href="login.html" class="nav_link">Blog</a></li>
+          <li><a href="about.html" class="nav_link">About us</a></li>
+          <li><a href="login.html" class="nav_link">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Start -->
+    <section class="hero">
+      <div class="row container">
+        <div class="column">
+          <h2>Learning never exhausts the mind</h2>
+          <p>The more that you read, the more things you will know. The more that you learn, the more places you'll go.</p><br>
+          <p>Whether you're a student, professional, or lifelong learner, LearnHub offers a comprehensive and engaging learning experience that adapts to your needs and goals.</p>
+        </div>
+    </section>
+    <!-- Hero End-->
+
+
+        <!-- Bottom Frame Start-->
+        <section class="bottom-frame">
+            <div class="container">
+              <div class="bottom-content">
+                <div class="contacts">
+                  <h3>Contacts</h3>
+                  <p>Email: contact@example.com</p>
+                  <p>Phone: +123 456 7890</p>
+                </div>
+                <div class="quick-links">
+                  <h3>Quick Links</h3>
+                  <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">FAQs</a></li>
+                  </ul>
+                </div>
+                <div class="latest-posts">
+                  <h3>Latest Posts</h3>
+                  <ul>
+                    <li><a href="#">Post 1</a></li>
+                    <li><a href="#">Post 2</a></li>
+                    <li><a href="#">Post 3</a></li>
+                  </ul>
+                </div>
+                <div class="social-media">
+                  <h3>Social Media</h3>
+                  <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook">&nbsp;Facebook</a></li>
+                    <li><a href="#"><img src="twitter.jpeg" alt="Twitter">&nbsp;Twitter</a></li>
+                    <li><a href="#"><img src="insta.png" alt="Instagram">&nbsp;Instagram</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+  </main>
+
+  <script>
+    const header = document.querySelector("header");
+    const menuToggler = document.querySelectorAll("#menu_toggle");
+
+    menuToggler.forEach(toggler => {
+      toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+    });
+  </script>
+</body>
+</html>

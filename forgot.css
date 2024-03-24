@@ -1,0 +1,55 @@
+body{
+    /* background: #6610f2;*/
+    background-image: url(image.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+  
+  }
+
+
+.forgot-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top:70px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color:transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.forgot-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.forgot-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.forgot-container input[type="email"] {
+    width: 53vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.forgot-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color:gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.forgot-container p {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.forgot-container a {
+    color:whitesmoke;
+}

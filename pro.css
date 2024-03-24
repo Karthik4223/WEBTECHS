@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+main {
+  /* background: #6610f2;*/
+  background-image: url(image.jpeg);
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.nav_logo {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.active, .nav ul  li:hover{
+    color: #333;
+}
+
+
+/* Adjusted styles for submenu */
+.menu_items .dropdown {
+	position: relative; /* Set position for the dropdown */
+  }
+  
+  .submenu {
+	position: absolute;
+	background-color: #0c0b0b;
+	border: 1px solid #080808;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	display: none; /* Hide submenu by default */
+	top: 100%; /* Position the submenu below the parent */
+	left: 0;
+  }
+  
+  .menu_items .dropdown:hover .submenu {
+	display:block; /* Show submenu on parent hover */
+	background:none;
+
+}
+  
+  .submenu li {
+	padding: 10px;
+	list-style: none;
+	box-shadow:rgb(14, 13, 12);
+	font-size: small;
+  }
+  
+  .submenu a {
+	color: #333;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .submenu a:hover {
+	background-color: #0a0a0a;
+  }
+
+
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png);
+  background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
+  background-repeat: no-repeat;
+}
+.curveImg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.hero .row {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.hero .row h2,
+.hero .row p {
+  color: #0a0909;
+}
+.hero .row h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.hero .column {
+  width: 50%;
+}
+.buttons {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+.btn {
+  padding: 14px 26px;
+  background: #050505;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:last-child {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #0f0e0e;
+}
+.btn:last-child:hover {
+  background-color: #fff;
+  color: #333;
+}
+.hero_img {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+#menu_toggle {
+  display: none;
+}
+
+/* Reponsive */
+@media (width < 860px) {
+  #menu_toggle {
+    display: block;
+  }
+  .nav {
+    padding: 0 20px;
+    background-color: #fff;
+  }
+
+  .menu_items {
+    position: fixed;
+    top: 0;
+    width: 260px;
+    background-color: #fff;
+    height: 100%;
+    left: -100%;
+    padding: 50px 30px 30px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  .showMenu .menu_items {
+    left: 0;
+  }
+  a {
+    color: #333;
+  }
+  #menu_toggle {
+    width: 20px;
+    cursor: pointer;
+  }
+  .menu_items #menu_toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hero {
+    padding-top: 130px;
+  }
+  .hero .row {
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .hero .row .column {
+    width: 100%;
+  }
+}
+
+@media (width < 600px) {
+  .hero {
+    padding-top: 80px;
+  }
+  .hero .row h2 {
+    font-size: 26px;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .btn {
+    padding: 10px 16px;
+  }
+}
+
+
+  /* ... Your responsive media queries ... */
+  
+
+  /* Add your existing styles here */
+
+/* About Us Page */
+.about-us {
+	padding: 60px 0;
+  }
+  
+  .about-content {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  
+  .about-content h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+  }
+  
+  .about-content p {
+	font-size: 16px;
+	line-height: 1.6;
+	margin-bottom: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 860px) {
+	/* Add responsive styles here */
+  }
+  
+  @media (max-width: 600px) {
+	/* Add responsive styles here */
+  }
+  
+
+
+  /* Style for the rounded text information section */
+.rounded-text-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style for each individual info item */
+.info-item {
+  text-align: center;
+}
+
+/* Style for the info icon */
+.info-icon {
+  background-color: transparent;
+  color: black;
+  border-radius: 50%;
+  border-style: solid;
+  padding: 5px;
+  width: 100px;
+  height: 70px;
+  line-height: 60px;
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Style for the info value */
+.info-value {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* Additional styling for the rest of the content */
+.container {
+  padding: 20px;
+}
+
+.about-content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  margin-top: 10px;
+}
+
+
+/* Add this section to your existing CSS file */
+/* Style for the CTA buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+  text-align: center;
+}
+
+.cta-buttons button {
+  margin: 0 100px 20px 0;
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  border-style: solid;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons button:last-child {
+  margin-right: 0;
+}
+
+.cta-buttons button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.cta-buttons button.btn-primary {
+  background-color: transparent;
+  color: #fff;
+}
+
+.cta-buttons button.btn-primary:hover {
+  background-color: turquoise;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+  text-align: left; /* Center the upcoming events section */
+  margin-top: 150px; /* Add spacing between the buttons and the events */
+  margin-bottom: 30px; /* Add spacing below the events section */
+}
+
+.upcoming-events h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.upcoming-events ul {
+  list-style: disc;
+  padding: 0;
+}
+
+.upcoming-events li {
+  margin-bottom: 20px;
+}
+
+.upcoming-events a {
+  text-decoration: none;
+  color:black;
+}
+
+
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  font-size: 18px;
+  color: #888;
+}
+
+.profile-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  margin-bottom: 20px;
+}
+
+.profile-details ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.profile-details ul li {
+  margin-bottom: 5px;
+}
+

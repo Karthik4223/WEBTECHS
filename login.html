@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+    <!-- Login Section -->
+    <div class="login-container mt-5">
+        <center><h2>Login</h2></center>
+        <form id="login-form" action="login.jsp" method="post" >
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <center><button type="submit">Login</button></center>
+        </form>
+        <a href="forgot.html" id="forgot-password">Forgot Password?</a><br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Don't you have an account? <br><br><button type="button" id="show-signup">Sign Up</button>
+    </div>
+    <!-- Sign Up Section -->
+    <div class="signup-container" style="display: none;">
+        <center><h2>Sign Up</h2></center>
+        <form  id="signup-form" action="signup.jsp" method="post" onsubmit="return validatePassword()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="" required>
+            <center><button type="submit">Sign Up</button></center>
+        </form>
+        <p>Already have an account? <button type="button" id="show-login">Login</button></p>
+    </div>
+    <script>
+
+
+        function validatePassword() {
+            var password = document.getElementById("signup-password").value;
+
+            if (password.length >= 8) {
+                alert("Signup successfully")
+                return true;
+                
+            }
+            else{
+                alert(" Password must be at least 8 characters long ");
+                return false;
+            }
+        }
+
+
+        const loginContainer = document.querySelector('.login-container');
+        const signupContainer = document.querySelector('.signup-container');
+        const showSignupButton = document.getElementById('show-signup');
+        const showLoginButton = document.getElementById('show-login');
+        showSignupButton.addEventListener('click', () => {
+            loginContainer.style.display = 'none';
+            signupContainer.style.display = 'block';
+        });
+
+        showLoginButton.addEventListener('click', () => {
+            loginContainer.style.display = 'block';
+            signupContainer.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

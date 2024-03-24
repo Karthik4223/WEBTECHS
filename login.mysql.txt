@@ -1,0 +1,9 @@
+create database hi;
+use hi;
+CREATE TABLE students (
+    name VARCHAR(50) NOT NULL,
+    phno VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL primary key,
+    password varchar(50)
+);
+select * from students;
